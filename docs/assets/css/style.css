@@ -497,7 +497,7 @@ section {
   background: #7bbad7;
 }
 .about .icon-boxes .icon-box {
-  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .about .icon-boxes .icon-box i {
   font-size: 40px;
@@ -521,6 +521,13 @@ section {
 @media (max-width: 768px) {
   .about {
     text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about .content p {
+    text-align: left;
+    margin: 20px 10px;
   }
 }
 
