@@ -1,0 +1,21 @@
+{
+	"welcome": "Dobrodosli u ",
+	"welcome-message": "Najveci proejktant vjetroparkova u hrvatskoj",
+	"menu-home": "Početna",
+	"menu-about": "O nama",
+	"menu-projects": "Projekti",
+	"menu-operational": "Aktivni",
+	"menu-development": "U razvoju",
+	"menu-news": "Novosti",
+	"menu-contact": "Kontakt",
+	"contact-address": "Nasa adresa",
+	"contact-email": "Email",
+	"contact-emaulus": "Pošaljite mail",
+	"contact-phone": "Telefon",
+	"contact-phoneus": "Nazovite nas",
+	"place-contact-form-name": "Vaše ime",
+	"place-contact-form-mail": "Vaš email",
+	"place-contact-form-subject": "Naslov",
+	"place-contact-form-message": "Poruka",
+	"contact-form-send": "Pošalji"
+}

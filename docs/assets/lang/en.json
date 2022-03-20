@@ -1,0 +1,21 @@
+{
+	"welcome": "Welcome to",
+	"welcome-message": "LARGEST WIND FARM PROJECT DEVELOPER IN CROATIA",
+	"menu-home": "Home",
+	"menu-about": "About us",
+	"menu-projects": "Projects",
+	"menu-operational": "Operational",
+	"menu-development": "Development",
+	"menu-news": "News",
+	"menu-contact": "Contact",
+	"contact-address": "Our Address",
+	"contact-email": "Email",
+	"contact-emaulus": "Email Us",
+	"contact-phone": "Phone",
+	"contact-phoneus": "Call Us",
+	"place-contact-form-name": "Your name",
+	"place-contact-form-mail": "Your Email",
+	"place-contact-form-subject": "Subject",
+	"place-contact-form-message": "Message",
+	"contact-form-send": "Send Message"
+}

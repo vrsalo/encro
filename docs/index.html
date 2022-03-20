@@ -48,17 +48,17 @@
 
 			<nav class="navbar" id="navbar">
 				<ul>
-					<li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-					<li><a class="nav-link scrollto" href="#about">About Us</a></li>
-					<li class="dropdown"><a href="#projects"><span>Projects</span> <i
+					<li><a class="nav-link scrollto active" href="#hero" data-i18n-key="menu-home">Home</a></li>
+					<li><a class="nav-link scrollto" href="#about" data-i18n-key="menu-about">About Us</a></li>
+					<li class="dropdown"><a href="#projects"><span data-i18n-key="menu-projects">Projects</span> <i
 								class="bi bi-chevron-down"></i></a>
 						<ul>
-							<li><a href="operational.html">Operational</a></li>
-							<li><a href="development.html">Development</a></li>
+							<li><a href="operational.html" data-i18n-key="menu-operational">Operational</a></li>
+							<li><a href="development.html" data-i18n-key="menu-development">Development</a></li>
 						</ul>
 					</li>
-					<li><a class="nav-link scrollto" href="news.html">News</a></li>
-					<li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+					<li><a class="nav-link scrollto" href="news.html" data-i18n-key="menu-news">News</a></li>
+					<li><a class="nav-link scrollto" href="#contact" data-i18n-key="menu-contact">Contact</a></li>
 				</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
 			</nav><!-- .navbar -->
@@ -69,8 +69,8 @@
 	<!-- ======= Hero Section ======= -->
 	<section id="hero">
 		<div class="hero-container" data-aos="zoom-in" >
-			<h1>Welcome to <img alt="" class="img-fluid" src="assets/img/logo.svg"></h1>
-			<h2>largest wind farm project developer in Croatia</h2>
+			<h1 > <span data-i18n-key="welcome">Welcome to </span>  <img alt="" class="img-fluid" src="assets/img/logo.svg"></h1>
+			<h2 data-i18n-key="welcome-message">largest wind farm project developer in Croatia</h2>
 			<a class="btn-get-started scrollto" href="#about"><i class="bx bx-chevrons-down"></i></a>
 		</div>
 	</section><!-- End Hero -->
@@ -84,7 +84,7 @@
 				<div class="row no-gutters">
 					<div class="content col-xl-7 d-flex align-items-stretch" data-aos="fade-right">
 						<div class="content">
-							<h3>About us</h3>
+							<h3 data-i18n-key="menu-about">About us</h3>
 							<p>
 								ENCRO is the largest wind farm project developer in Croatia. Our team has developed
 								<b> 7 wind farms</b> with a total installed capacity of <b>141.4 MW. </b>
@@ -205,7 +205,7 @@
 		<section class="team" id="projects">
 			<div class="container">
 				<div class="section-title " data-aos="fade-in" data-aos-delay="100">
-					<h2>Projects</h2>
+					<h2 data-i18n-key="menu-projects">Projects</h2>
 					<p>Our team has developed and maintaining
 						7 wind farms with additional 2 wind farms in development</p>
 				</div>
@@ -253,7 +253,7 @@
 			<div class="container">
 
 				<div class="section-title" data-aos="fade-in" data-aos-delay="100">
-					<h2>Latest News</h2>
+					<h2 data-i18n-key="menu-news">Latest News</h2>
 				</div>
 
 				<div class="row">
@@ -301,7 +301,7 @@
 			<div class="container" data-aos="fade-up">
 
 				<div class="section-title">
-					<h2>Contact</h2>
+					<h2 data-i18n-key="menu-contact">Contact</h2>
 				</div>
 
 				<div class="row">
@@ -311,7 +311,7 @@
 							<div class="col-md-12"><a href=" https://goo.gl/maps/kfW69frx43baX1Gz9">
 									<div class="info-box mb-4">
 										<i class="bx bx-map"></i>
-										<h3>Our Address</h3>
+										<h3 data-i18n-key="contact-address">Our Address</h3>
 										<p>Jurišićeva 1a, 10000 Zagreb, Croatia</p>
 									</div>
 								</a>
@@ -319,7 +319,7 @@
 							<div class="col-md-6"><a href="mailto:info@encro.hr">
 									<div class="info-box  mb-4">
 										<i class="bx bx-envelope"></i>
-										<h3>Email Us</h3>
+										<h3 data-i18n-key="contact-emaulus">Email Us</h3>
 										<p> info@encro.hr</p>
 									</div>
 								</a>
@@ -327,7 +327,7 @@
 							<div class=" col-md-6"><a href="tel:+385 01 0000 000">
 									<div class="info-box  mb-4">
 										<i class="bx bx-phone-call"></i>
-										<h3>Call Us</h3>
+										<h3 data-i18n-key="contact-phoneus">Call Us</h3>
 										<p>+385 01 0000 000</p>
 									</div>
 								</a>
@@ -339,20 +339,20 @@
 						<form action="forms/contact.php" class="php-email-form" method="post" role="form">
 							<div class="row">
 								<div class="col-md-6 form-group">
-									<input class="form-control" id="name" name="name" placeholder="Your Name" required
+									<input data-i18n-key="place-contact-form-name" class="form-control" id="name" name="name" placeholder="Your Name" required
 										type="text">
 								</div>
 								<div class="col-md-6 form-group mt-3 mt-md-0">
-									<input class="form-control" id="email" name="email" placeholder="Your Email"
+									<input data-i18n-key="place-contact-form-mail" class="form-control" id="email" name="email" placeholder="Your Email"
 										required type="email">
 								</div>
 							</div>
 							<div class="form-group mt-3">
-								<input class="form-control" id="subject" name="subject" placeholder="Subject" required
+								<input data-i18n-key="place-contact-form-subject" class="form-control" id="subject" name="subject" placeholder="Subject" required
 									type="text">
 							</div>
 							<div class="form-group mt-3">
-								<textarea class="form-control" id="message" name="message" placeholder="Message"
+								<textarea data-i18n-key="place-contact-form-message" class="form-control" id="message" name="message" placeholder="Message"
 									required rows="5"></textarea>
 							</div>
 							<div class="my-3">
@@ -361,7 +361,7 @@
 								<div class="sent-message">Your message has been sent. Thank you!</div>
 							</div>
 							<div class="text-center">
-								<button type="submit">Send Message</button>
+								<button type="submit" data-i18n-key="contact-form-send">Send Message</button>
 							</div>
 						</form>
 					</div>
@@ -384,8 +384,8 @@
 							<p>
 								Jurišićeva 1a <br>
 								10000 Zagreb, Croatia<br><br>
-								<strong>Phone:</strong> <a href="tel:+385 01 0000 000">+385 01 0000 000</a><br>
-								<strong>Email:</strong> <a href="mailto:info@encro.hr"> info@encro.hr</a><br>
+								<strong data-i18n-key="contact-email">Phone:</strong> <a href="tel:+385 01 0000 000">+385 01 0000 000</a><br>
+								<strong data-i18n-key="contact-phone">Email:</strong> <a href="mailto:info@encro.hr"> info@encro.hr</a><br>
 							</p>
 							<div class="social-links mt-3">
 								<a class="linkedin" href="https://hr.linkedin.com/company/eko-d.o.o."><i
@@ -419,6 +419,8 @@
 	<!-- Template Main JS File -->
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/validate.js"></script>
+		<script src="assets/js/translate.js"></script>
+
 
 </body>
 
