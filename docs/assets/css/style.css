@@ -617,7 +617,7 @@ section {
   font-size: 44px;
   color: #67b0d1;
   float: left;
-  line-height: 0;
+  line-height: 1;
 }
 .counts .count-box span {
   font-size: 48px;
@@ -998,7 +998,7 @@ section {
   font-size: 20px;
   color: #777777;
   font-weight: 700;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 .contact .info-box p {
   padding: 0;

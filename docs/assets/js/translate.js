@@ -1,5 +1,5 @@
 // The locale our app first shows
-const defaultLocale = "hr";
+const defaultLocale = "en";
 
 // The active locale
 let locale;
