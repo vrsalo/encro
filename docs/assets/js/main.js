@@ -181,8 +181,8 @@
 			mirror: false
 		});
 	});
-	
-		let forms = document.querySelectorAll('.php-email-form');
+
+	let forms = document.querySelectorAll('.php-email-form');
 
 	forms.forEach(function(e) {
 		e.addEventListener('submit', function(event) {
@@ -238,7 +238,7 @@
 				}
 			],
 			subject: "Upit web - " + formData.get("subject"),
-			htmlContent: formData.get("message").replaceAll("\n","<br>")
+			htmlContent: formData.get("message").replaceAll("\n", "<br>")
 		};
 
 		fetch("https://api.sendinblue.com/v3/smtp/email", {
@@ -306,6 +306,29 @@ async function setLocale(newLocale) {
 	translations = newTranslations;
 
 	translatePage();
+
+	$.each(translations.news, function(key, value) {
+		var template = $(".entry:first");
+		template.clone().prependTo(".entries")
+		template.show();
+		template.attr("id", key);
+		template.find("img").attr("src", value.img);
+		template.find("h2").html(value.title)
+		template.find("span").html(value.date)
+		template.find(".entry-content").html("<p><i>" + value.short + "</i></p><p>" + value.extra + "</p>")
+
+		if (key < 3) {
+			template = $(".newsShort:first");
+			template.clone().prependTo(".newsShorts")
+			template.show();
+
+			template.click(function() { window.location.href = 'news.html' });
+			template.find(".title").html(value.title)
+			template.find(".date").html(value.date)
+			template.find(".description").html(value.short)
+		}
+	});
+
 }
 
 // Retrieve translations JSON object for the given
@@ -331,6 +354,7 @@ function translateElement(element) {
 	const key = element.getAttribute("data-i18n-key");
 	if (key.startsWith('place-'))
 		element.placeholder = translations[key];
-	else
-		element.innerText = translations[key];
+	else {
+		$(element).html(translations[key])
+	}
 }
