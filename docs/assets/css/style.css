@@ -402,7 +402,6 @@ section {
   transform: translate(-50%, -50%);
   width: 122px;
   height: 66px;
-  background: url(../img/section-title-bg.png) no-repeat;
   z-index: -1;
 }
 .section-title p {

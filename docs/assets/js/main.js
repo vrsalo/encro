@@ -307,7 +307,16 @@ async function setLocale(newLocale) {
 
 	translatePage();
 
+
+	let searchParams = new URLSearchParams(window.location.search)
+
 	$.each(translations.news, function(key, value) {
+
+		if (searchParams.has('id')) {
+			let id = searchParams.get('id')
+			if (key != id) return
+		}
+
 		var template = $(".entry:first");
 		template.clone().prependTo(".entries")
 		template.show();
@@ -315,14 +324,16 @@ async function setLocale(newLocale) {
 		template.find("img").attr("src", value.img);
 		template.find("h2").html(value.title)
 		template.find("span").html(value.date)
-		template.find(".entry-content").html("<p><i>" + value.short + "</i></p><p>" + value.extra + "</p>")
+		template.find(".entry-content").html("<p><i>" + value.short + "</i></p>")
+		if (searchParams.has('id')) template.find(".entry-content").append("<p>" + value.extra + "</p>")
+		template.click(function() { window.location.href = 'news.html?id=' + key });
 
 		if (key < 3) {
 			template = $(".newsShort:first");
 			template.clone().prependTo(".newsShorts")
 			template.show();
 
-			template.click(function() { window.location.href = 'news.html' });
+			template.click(function() { window.location.href = 'news.html?id=' + key });
 			template.find(".title").html(value.title)
 			template.find(".date").html(value.date)
 			template.find(".description").html(value.short)
