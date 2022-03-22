@@ -1,8 +1,9 @@
 {
 	"welcome": "Welcome to",
-	"welcome-message": "LARGEST WIND FARM PROJECT DEVELOPER IN CROATIA",
+	"welcome-message": "one of the largest wind farm project developers in Croatia",
 	"menu-home": "Home",
 	"menu-about": "About us",
+	"menu-vision": "Vision",
 	"menu-projects": "Projects",
 	"menu-operational": "Operational",
 	"menu-development": "Development",
@@ -17,9 +18,18 @@
 	"place-contact-form-subject": "Subject",
 	"place-contact-form-message": "Message",
 	"contact-form-send": "Send Message",
-	"text-about": "<p>ENCRO is one of the largest project developers in Croatia. Our team has developed <b>7 wind farms</b> with a total installed capacity of <b>141.4 MW.</b></p> <p>During the last <b>15 years</b>, ENCRO has explored and identified locations in Croatia suitable for building wind farms and successfully develop multiple wind projects.</p> <p>With our extensive experience in engineering, supervision and renewable portfolio asset management we have also more than 1000 MW new Wind and Solar projects in the pipeline.</p> <p>Working as a pioneer in the Croatian renewable energy sector we are fully focused on the energy transition and our projects form an important part in contributing to the goal of carbon neutral Europe as envisioned by the European green deal and the ‘Fit for 55’ package.</p>",
+	"text-about": "<p>Our team has developed <b>7 wind farms</b> with a total installed capacity of <b>141.4 MW</b>, which positions us among top Croatia's wind farm project developers.</p> <p>During the last <b>15 years</b>, ENCRO has explored and identified locations in Croatia suitable for building wind farms and successfully develop multiple wind projects.</p> <p>With our extensive experience in engineering, supervision and renewable portfolio asset management we have also more than 1000 MW new Wind and Solar projects in the pipeline.</p> <p>Working as a pioneer in the Croatian renewable energy sector we are fully focused on the energy transition and our projects form an important part in contributing to the goal of carbon neutral Europe as envisioned by the European green deal and the ‘Fit for 55’ package.</p>",
 	"text-vision": " <p> Following on the Paris Agreement on Climate Change, the EU has led by example in setting ambitious targets for reducing net emissions by at least 55% by 2030 compared to 1990 and for being the first climate neutral continent by 2050. These goals are no longer aspirations or ambitions, but obligations laid down in the first European Climate Law that create new opportunities for innovation, investment and jobs.</p> <p> In this spirit the package of proposals, adopted in July 2021, aims to make the EU ‘fit for 55’ and deliver transformational change needed across our economy, society and industry. These measures will support Europe’s climate policy framework and put the EU on track for a 55% reduction in carbon emissions.</p> <p> One of the key instruments to reach the 2030 target is updated Renewable Energy Directive that increases the overall binding target from the current 32% to a new level of 40% renewables in the EU energy mix! </p>",
 	"text-projects": "Our team has developed and maintains 7 wind farms with additional 2 wind farms under construction",
+	"text-development": "<h3>WF ZD2P&amp;ZD3P Development</h3><p>The wind farms configuration includes:</p> &minus; Nordex DELTA 4000 wind turbine generators (WTGs) and associated operating plateaus,<br> &minus; internal access roads to individual WTGs, 5 m wide, in a corridor up to 10 m wide,<br> &minus; underground MV cable and distributive telecommunication canalisation (along access roads),<br> &minus; electrical connection point in the existing substation TS 20/110 kV Bruska.<br> <p>WF ZD2P will have 15 WTGs installed with total installed capacity of 68 MW and WF ZD3P will have 10 WTGs installed with total installed capacity of 53 MW. In line with the Electrical Connection Approvals, connected capacities are 68 MW for WF ZD2P and 43 MW for WF ZD3P.</p> <p>According to valid environmental decisions and construction permits it is possible to install turbine model with rotor diameter up to 170 m and tip height up to 210 m. The selected Nordex DELTA 4000 WTGs fall within the maximum dimensions permitted under environmental decisions, location and construction permits.</p> <p>The wind turbine typically consists of three blades around a rotor hub, connected to the main shaft which is spinning the generator to generate electricity by converting the wind&rsquo;s kinetic energy into electrical energy which can be fed to the electrical grid (Figure 2-6). Envisaged Nordex DELTA 4000 wind turbines are the newest generation of wind turbines with integrated flexible power rating which enables different application modes associated with specific ambient and wind conditions on the site and conditions in the transmission grid. Also, this feature allows to configure uniquely tailored solutions that meet site requirements, such as optimizing the operation of the wind farm in terms of capacity factor, achieving higher efficiency, WTG life extension and noise emissions.</p>",
+	"wf-year": "Year",
+	"wf-location": "Location",
+	"wf-power": "Power",
+	"wf-not": "No. of turbines",
+	"wf-type": "Type",
+	"wf-prod": "Production (GWh)",
+	"wf-load": "Full load hours (h)",
+	"wf-factor": "Capacity factor (%)",
 	"news": [
 		{
 			"title": "Encro.hr 1🥳",
@@ -32,14 +42,14 @@
 			"title": "Encro.hr p2 🥳",
 			"short": "We are happy to announce our web page is online <h1>🎉</h1>",
 			"extra": "Its there after some development :)",
-			"date": "Mar 20, 2022",
+			"date": "Mar 21, 2022",
 			"img": ""
 		},
 		{
 			"title": "Encro.hr TEST2 🥳",
 			"short": "We are happy to announce our web page is online <h1>🎉</h1>",
 			"extra": "Its there after some development :)",
-			"date": "Mar 20, 2022",
+			"date": "Mar 22, 2022",
 			"img": ""
 		},
 		{
@@ -49,5 +59,95 @@
 			"date": "Mar 22, 2022",
 			"img": "assets/img/zd6/3.jpg"
 		}
-	]
+	],
+	"projects": {
+		"open": [
+			{
+				"name": "WF Zadar 6",
+				"id": "ZD6",
+				"year": "2011",
+				"location": "Gračac",
+				"power": "9 MW",
+				"not": "4",
+				"type": "SWT-2.3-82VS",
+				"prod": "26.3",
+				"load": "2,925",
+				"factor": "33",
+				"text": "Wind farm Zadar 6 (9 MW) located in Gračac County is in commercial operation since January 2011 and is one of the top-ranking Croatian wind farms. The Wind farm consists of 4 x SWT-2.3-82VS turbines.",
+				"img": []
+			},
+			{
+				"name": "WF Zadar 6 Extension",
+				"id": "ZD6E",
+				"year": "2017",
+				"location": "Gračac",
+				"power": "44.2 MW",
+				"not": "13",
+				"type": "SWT-3.4-108",
+				"prod": "131.7",
+				"load": "2,980",
+				"factor": "34",
+				"text": "Wind farm Zadar 6 Extension (44.2 MW) represents an extension of the Zadar 6 project. The Wind farm consists of 13 x SWT-3.4-108 turbines. Compared to the Zadar 6 turbines the Zadar 6 Extension turbines have a 73 % bigger rotor swept area and a 48 % bigger nominal power. WF Zadar 6 Extension is in commercial operation since October 2017.",
+				"img": []
+			},
+			{
+				"name": "WF Zadar 2 & 3",
+				"id": "ZD23",
+				"year": "2012",
+				"location": "Benkovac",
+				"power": "36 MW",
+				"not": "16",
+				"type": "SWT-2.3-93, SWT-2.3-101",
+				"prod": "113.5",
+				"load": "3,154",
+				"factor": "36",
+				"text": "Wind farm Zadar 2 & 3 (36 MW) located in Benkovac and Obrovac Counties is in commercial operation since February 2012. The Wind farm consists of 8 x SWT-2.3-93 (Zadar 2) and 8 x SWT-2.3-101 (Zadar 3) turbines. Since the beginning of commercial operation Zadar 2 & 3 has continuously ranked 1st in Croatia based on capacity factor.",
+				"img": []
+			},
+			{
+				"name": "WF Voštane Kamensko",
+				"id": "VK",
+				"year": "2013",
+				"location": "Trilj",
+				"power": "40 MW",
+				"not": "14",
+				"type": "SWT-3.0-101",
+				"prod": "104.2",
+				"load": "2,605",
+				"factor": "30",
+				"text": "Wind farm Voštane Kamensko (40 MW) located in Trilj County is in commercial operation since August 2013 and consists of 14 x SWT-3.0-101 turbines. Voštane Kamensko has an above average capacity factor.",
+				"img": []
+			},
+			{
+				"name": "WF Zadar 4",
+				"id": "ZD4",
+				"year": "2013",
+				"location": "Benkovac",
+				"power": "9 MW",
+				"not": "4",
+				"type": "SWT-2.3-108",
+				"prod": "21.7",
+				"load": "2,416",
+				"factor": "28",
+				"text": "Wind farm Zadar 4 (9 MW) located in Benkovac County. Zadar 4 is in commercial operation since August 2013 and has an above average capacity factor. The Wind farm consists of 4 x SWT-2.3-108 turbines.",
+				"img": []
+			}
+		],
+		"dev": [
+			{
+				"name": "WF ZD2P&amp;ZD3P",
+				"id": "ZD23E",
+				"year": "2022",
+				"location": "Benkovac",
+				"power": "9 MW",
+				"not": "4",
+				"type": "SWT-2.3-108",
+				"prod": "21.7",
+				"load": "2,416",
+				"factor": "28",
+				"text": "",
+				"img": []
+			}
+		]
+	}
 }

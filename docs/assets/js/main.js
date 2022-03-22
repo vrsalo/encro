@@ -313,46 +313,149 @@ async function setLocale(newLocale) {
 	let searchParams = new URLSearchParams(window.location.search)
 	var tempTemplate;
 
+	// news populate
 	var template = $(".entry:first");
-	$.each(translations.news, function(key, value) {
+	if (template.length) {
+		debugger;
+		$.each(translations.news, function(key, value) {
+			if (searchParams.has('id')) {
+				let id = searchParams.get('id')
+				if (key != id) return
+			}
 
-		if (searchParams.has('id')) {
-			let id = searchParams.get('id')
-			if (key != id) return
-		}
+			tempTemplate = template.clone()
+			tempTemplate.prependTo(".entries")
+			tempTemplate.show();
+			tempTemplate.attr("id", key);
+			tempTemplate.find("img").attr("src", value.img);
+			tempTemplate.find("h2").html(value.title)
+			tempTemplate.find("span").html(value.date)
+			tempTemplate.find(".entry-content").html("<p><i>" + value.short + "</i></p>")
+			if (searchParams.has('id')) {
+				tempTemplate.find(".entry-content").append("<p>" + value.extra + "</p>")
+				$(".section-title").hide();
+			} else {
+				tempTemplate.click(function() { window.location.href = 'news.html?id=' + key });
+				tempTemplate.css('cursor', 'pointer');
 
-		tempTemplate = template.clone()
-		tempTemplate.prependTo(".entries")
-		tempTemplate.show();
-		tempTemplate.attr("id", key);
-		tempTemplate.find("img").attr("src", value.img);
-		tempTemplate.find("h2").html(value.title)
-		tempTemplate.find("span").html(value.date)
-		tempTemplate.find(".entry-content").html("<p><i>" + value.short + "</i></p>")
-		if (searchParams.has('id')) {
-			tempTemplate.find(".entry-content").append("<p>" + value.extra + "</p>")
-			$(".section-title").hide();
-		} else {
-			tempTemplate.click(function() { window.location.href = 'news.html?id=' + key });
-			tempTemplate.css('cursor', 'pointer');
+			}
+		});
 
-		}
-	});
+	}
 
-	var total = translations.news.length - 3;
-
+	// news short main page
 	template = $(".newsShort:first");
+	if (template.length) {
+		debugger;
+		var total = translations.news.length - 3;
+		$.each(translations.news.slice(-3), function(key, value) {
+			tempTemplate = template.clone()
+			tempTemplate.prependTo(".newsShorts")
+			tempTemplate.show();
 
-	$.each(translations.news.slice(-3), function(key, value) {
-		tempTemplate = template.clone()
-		tempTemplate.prependTo(".newsShorts")
-		tempTemplate.show();
+			tempTemplate.find(".icon-box").click(function() { window.location.href = 'news.html?id=' + (total + key) });
+			tempTemplate.find(".icon-box").css('cursor', 'pointer');
+			tempTemplate.find(".title").html(value.title)
+			tempTemplate.find(".date").html(value.date)
+			tempTemplate.find(".description").html(value.short)
+		});
+	}
 
-		tempTemplate.find(".icon-box").click(function() { window.location.href = 'news.html?id=' + (total + key) });
-		tempTemplate.find(".icon-box").css('cursor', 'pointer');
-		tempTemplate.find(".title").html(value.title)
-		tempTemplate.find(".date").html(value.date)
-		tempTemplate.find(".description").html(value.short)
+	// windfarm  op
+	template = $(".windfarmop:first");
+	if (template.length) {
+		debugger;
+		$.each(translations.projects.open, function(key, value) {
+			if (searchParams.has('id')) {
+				let id = searchParams.get('id')
+				if (value.id != id) return
+			}
+
+			tempTemplate = template.clone()
+			tempTemplate.prependTo(".windfarms:first")
+			tempTemplate.show();
+			tempTemplate.attr("id", value.id);
+			tempTemplate.find("h3").html(value.name)
+
+
+			tempTemplate.find("strong").each(function(index) {
+				var tempKey = $(this).attr("data-i18n-key").replaceAll("wf-", "");
+				var temVale = value[tempKey]
+				if (temVale)
+					$(this).parent().append(": " + value[tempKey]);
+				else $(this).remove()
+			});
+
+
+			if (searchParams.has('id')) {
+				tempTemplate.find("p").html(value.text)
+				$(".section-title").hide();
+			} else {
+				tempTemplate.click(function() { window.location.href = '?id=' + value.id });
+				tempTemplate.css('cursor', 'pointer');
+
+			}
+		});
+
+	}
+
+	// windfarm  dev
+	template = $(".windfarmdev:first");
+	if (template.length) {
+		debugger;
+		$.each(translations.projects.dev, function(key, value) {
+			if (searchParams.has('id')) {
+				let id = searchParams.get('id')
+				if (value.id != id) return
+			}
+
+			tempTemplate = template.clone()
+			tempTemplate.prependTo(".windfarms:first")
+			tempTemplate.show();
+			tempTemplate.attr("id", value.id);
+			tempTemplate.find("h3").html(value.name)
+
+
+			tempTemplate.find("strong").each(function(index) {
+				var tempKey = $(this).attr("data-i18n-key").replaceAll("wf-", "");
+				var temVale = value[tempKey]
+				if (temVale)
+					$(this).parent().append(": " + value[tempKey]);
+				else $(this).remove()
+			});
+
+
+			if (searchParams.has('id')) {
+				tempTemplate.find("p").html(value.text)
+				$(".section-title").hide();
+			} else {
+				tempTemplate.click(function() { window.location.href = '?id=' + value.id });
+				tempTemplate.css('cursor', 'pointer');
+
+			}
+		});
+
+	}
+
+	/**
+ * Portfolio details slider
+ */
+	new Swiper('.portfolio-details-slider', {
+		speed: 1000,
+		loop: true,
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true
+		}
 	});
 
 }
