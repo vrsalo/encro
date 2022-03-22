@@ -153,7 +153,7 @@
 	 * Portfolio details slider
 	 */
 	new Swiper('.portfolio-details-slider', {
-		speed: 400,
+		speed: 1000,
 		loop: true,
 		effect: 'fade',
 		fadeEffect: {
@@ -309,7 +309,9 @@ async function setLocale(newLocale) {
 
 
 	let searchParams = new URLSearchParams(window.location.search)
+	var tempTemplate;
 
+	var template = $(".entry:first");
 	$.each(translations.news, function(key, value) {
 
 		if (searchParams.has('id')) {
@@ -317,32 +319,38 @@ async function setLocale(newLocale) {
 			if (key != id) return
 		}
 
-		var template = $(".entry:first");
-		template.clone().prependTo(".entries")
-		template.show();
-		template.attr("id", key);
-		template.find("img").attr("src", value.img);
-		template.find("h2").html(value.title)
-		template.find("span").html(value.date)
-		template.find(".entry-content").html("<p><i>" + value.short + "</i></p>")
-		template.click(function() { window.location.href = 'news.html?id=' + key });
+		tempTemplate = template.clone()
+		tempTemplate.prependTo(".entries")
+		tempTemplate.show();
+		tempTemplate.attr("id", key);
+		tempTemplate.find("img").attr("src", value.img);
+		tempTemplate.find("h2").html(value.title)
+		tempTemplate.find("span").html(value.date)
+		tempTemplate.find(".entry-content").html("<p><i>" + value.short + "</i></p>")
 		if (searchParams.has('id')) {
-			template.find(".entry-content").append("<p>" + value.extra + "</p>")
+			tempTemplate.find(".entry-content").append("<p>" + value.extra + "</p>")
 			$(".section-title").hide();
+		} else {
+			tempTemplate.click(function() { window.location.href = 'news.html?id=' + key });
+			tempTemplate.css('cursor', 'pointer');
+
 		}
 	});
 
 	var total = translations.news.length - 3;
 
-	$.each(translations.news.slice(-3), function(key, value) {
-		template = $(".newsShort:first");
-		template.clone().prependTo(".newsShorts")
-		template.show();
+	template = $(".newsShort:first");
 
-		template.click(function() { window.location.href = 'news.html?id=' + (total + key) });
-		template.find(".title").html(value.title)
-		template.find(".date").html(value.date)
-		template.find(".description").html(value.short)
+	$.each(translations.news.slice(-3), function(key, value) {
+		tempTemplate = template.clone()
+		tempTemplate.prependTo(".newsShorts")
+		tempTemplate.show();
+
+		tempTemplate.find(".icon-box").click(function() { window.location.href = 'news.html?id=' + (total + key) });
+		tempTemplate.find(".icon-box").css('cursor', 'pointer');
+		tempTemplate.find(".title").html(value.title)
+		tempTemplate.find(".date").html(value.date)
+		tempTemplate.find(".description").html(value.short)
 	});
 
 }
@@ -374,3 +382,15 @@ function translateElement(element) {
 		$(element).html(translations[key])
 	}
 }
+
+$("#hero").vegas({
+	shuffle: true,
+	slides: [
+		{ src: 'assets/img/zd6/1.jpg' },
+		{ src: 'assets/img/zd6/2.jpg' },
+		{ src: 'assets/img/zd6/3.jpg' },
+		{ src: 'assets/img/zd6/4.jpg' }
+	],
+	overlay: 'assets/img/04.png',
+	animation: ['kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight']
+});
