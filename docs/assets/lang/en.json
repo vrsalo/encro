@@ -22,7 +22,20 @@
 	"text-projects": "Our team has developed and maintains 7 wind farms with additional 2 wind farms under construction",
 	"news": [
 		{
-			"title": "Encro.hr page released 🥳",
+			"title": "Encro.hr 1🥳",
+			"short": "We are happy to announce our web page is online <h1>🎉</h1>",
+			"extra": "Its there after some development :)",
+			"date": "Mar 20, 2022",
+			"img": ""
+		},
+		{
+			"title": "Encro.hr p2 🥳",
+			"short": "We are happy to announce our web page is online <h1>🎉</h1>",
+			"extra": "Its there after some development :)",
+			"date": "Mar 20, 2022",
+			"img": ""
+		},		{
+			"title": "Encro.hr TEST2 🥳",
 			"short": "We are happy to announce our web page is online <h1>🎉</h1>",
 			"extra": "Its there after some development :)",
 			"date": "Mar 20, 2022",
