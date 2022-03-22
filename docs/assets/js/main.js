@@ -325,8 +325,11 @@ async function setLocale(newLocale) {
 		template.find("h2").html(value.title)
 		template.find("span").html(value.date)
 		template.find(".entry-content").html("<p><i>" + value.short + "</i></p>")
-		if (searchParams.has('id')) template.find(".entry-content").append("<p>" + value.extra + "</p>")
 		template.click(function() { window.location.href = 'news.html?id=' + key });
+		if (searchParams.has('id')){
+			template.find(".entry-content").append("<p>" + value.extra + "</p>")
+			$(".section-title").hide();
+		} 
 
 		if (key < 3) {
 			template = $(".newsShort:first");

@@ -287,7 +287,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .blog{padding:40px 0px;}
 .blog .entry{padding:30px;margin-bottom:60px;box-shadow:0 4px 16px rgba(0, 0, 0, 0.1);}
-.blog .entry .entry-img{max-height:440px;margin:-30px -30px 20px -30px;overflow:hidden;}
+.blog .entry .entry-img{max-height:440px;margin:-30px -30px 20px -30px;overflow:hidden;text-align: center;}
 .blog .entry .entry-title{font-size:28px;font-weight:bold;padding:0;margin:0 0 20px 0;}
 .blog .entry .entry-title a{color:#3c4133;transition:0.3s;}
 .blog .entry .entry-title a:hover{color:#94c045;}
@@ -1001,6 +1001,15 @@ section {
   }
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -1009,6 +1018,9 @@ section {
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 #footer .footer-top {
   padding: 60px 0 30px 0;
