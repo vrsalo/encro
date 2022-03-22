@@ -372,10 +372,17 @@ async function setLocale(newLocale) {
 			}
 
 			tempTemplate = template.clone()
+			if (key) tempTemplate.append("<hr>")
+
 			tempTemplate.prependTo(".windfarms:first")
 			tempTemplate.show();
 			tempTemplate.attr("id", value.id);
 			tempTemplate.find("h3").html(value.name)
+			var swiper = tempTemplate.find(".swiper-wrapper")
+
+			for (let step = 1; step < 4; step++) {
+				swiper.append('<div class="swiper-slide"><img alt="" src="assets/img/wf/' + value.id + '-' + step + '.webp"></div>')
+			}
 
 
 			tempTemplate.find("strong").each(function(index) {
@@ -385,7 +392,6 @@ async function setLocale(newLocale) {
 					$(this).parent().append(": " + value[tempKey]);
 				else $(this).remove()
 			});
-
 
 			if (searchParams.has('id')) {
 				tempTemplate.find("p").html(value.text)
@@ -414,6 +420,12 @@ async function setLocale(newLocale) {
 			tempTemplate.show();
 			tempTemplate.attr("id", value.id);
 			tempTemplate.find("h3").html(value.name)
+			var swiper = tempTemplate.find(".swiper-wrapper")
+
+
+			for (let step = 1; step < 4; step++) {
+				swiper.append('<div class="swiper-slide"><img alt="" src="assets/img/wf/' + value.id + '-' + step + '.jpg"></div>')
+			}
 
 
 			tempTemplate.find("strong").each(function(index) {
@@ -432,6 +444,24 @@ async function setLocale(newLocale) {
 				tempTemplate.click(function() { window.location.href = '?id=' + value.id });
 				tempTemplate.css('cursor', 'pointer');
 
+			}
+		});
+
+	}
+
+	// windfarm  dev
+	template = $(".social");
+	if (template.length) {
+		debugger;
+		$.each(template, function(key, valuet) {
+			if ($(valuet).hasClass('op')) {
+				$.each(translations.projects.open, function(key, value) {
+					$(valuet).append('<a href="operational.html?id=' + value.id + '" class="btn btn-outline-secondary rounded-pill">' + value.id + '</a>')
+				});
+			} else {
+				$.each(translations.projects.dev, function(key, value) {
+					$(valuet).append('<a href="development.html?id=' + value.id + '" class="btn btn-outline-secondary rounded-pill">' + value.id + '</a>')
+				});
 			}
 		});
 
@@ -487,15 +517,3 @@ function translateElement(element) {
 		$(element).html(translations[key])
 	}
 }
-
-$("#hero").vegas({
-	shuffle: true,
-	slides: [
-		{ src: 'assets/img/zd6/1.jpg' },
-		{ src: 'assets/img/zd6/2.jpg' },
-		{ src: 'assets/img/zd6/3.jpg' },
-		{ src: 'assets/img/zd6/4.jpg' }
-	],
-	overlay: 'assets/img/04.png',
-	animation: ['kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight']
-});
