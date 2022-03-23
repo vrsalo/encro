@@ -436,7 +436,6 @@ async function setLocale(newLocale) {
 					{ src: 'assets/img/wf/' + value.id + '-1.jpg' },
 					{ src: 'assets/img/wf/' + value.id + '-2.jpg' },
 					{ src: 'assets/img/wf/' + value.id + '-3.jpg' }
-
 				]
 			});
 
@@ -534,11 +533,16 @@ function translateElement(element) {
 $("#hero").vegas({
 	shuffle: true,
 	slides: [
-		{ src: 'assets/img/wf/ZD4-1.jpg' },
-		{ src: 'assets/img/wf/ZD6-3.jpg' },
-		{ src: 'assets/img/wf/ZD23-3.jpg' },
-		{ src: 'assets/img/wf/ZD6P-2.jpg' },
-		{ src: 'assets/img/wf/VK-3.jpg' }
+		{ src: 'assets/img/wf/ZD6-1.jpg' },
+		{
+			src: 'assets/img/wf/ZD6-2.jpg',
+			video: {
+				src: [
+					'assets/img/wf/vid.webm'
+				]
+			}
+		},
+		{ src: 'assets/img/wf/ZD23-3.jpg' }
 	],
 	overlay: 'assets/img/04.png',
 	animation: ['kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight']
