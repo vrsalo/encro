@@ -539,6 +539,12 @@ section {
   }
 }
 
+@media (max-width: 768px) {
+  .about .content li {
+    text-align: left;
+  }
+}
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
@@ -770,6 +776,10 @@ section {
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
+}
+
+.portfolio-details .portfolio-details-slider {
+  min-height: 40vh;
 }
 .portfolio-details .portfolio-details-slider img {
   width: 100%;

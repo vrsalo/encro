@@ -316,7 +316,7 @@ async function setLocale(newLocale) {
 	// news populate
 	var template = $(".entry:first");
 	if (template.length) {
-		debugger;
+
 		$.each(translations.news, function(key, value) {
 			if (searchParams.has('id')) {
 				let id = searchParams.get('id')
@@ -346,7 +346,7 @@ async function setLocale(newLocale) {
 	// news short main page
 	template = $(".newsShort:first");
 	if (template.length) {
-		debugger;
+
 		var total = translations.news.length - 3;
 		$.each(translations.news.slice(-3), function(key, value) {
 			tempTemplate = template.clone()
@@ -364,7 +364,7 @@ async function setLocale(newLocale) {
 	// windfarm  op
 	template = $(".windfarmop:first");
 	if (template.length) {
-		debugger;
+
 		$.each(translations.projects.open, function(key, value) {
 			if (searchParams.has('id')) {
 				let id = searchParams.get('id')
@@ -380,9 +380,16 @@ async function setLocale(newLocale) {
 			tempTemplate.find("h3").html(value.name)
 			var swiper = tempTemplate.find(".swiper-wrapper")
 
-			for (let step = 1; step < 4; step++) {
-				swiper.append('<div class="swiper-slide"><img alt="" src="assets/img/wf/' + value.id + '-' + step + '.webp"></div>')
-			}
+
+			$(".col-lg-8").vegas({
+				shuffle: true,
+				slides: [
+					{ src: 'assets/img/wf/' + value.id + '-1.jpg' },
+					{ src: 'assets/img/wf/' + value.id + '-2.jpg' },
+					{ src: 'assets/img/wf/' + value.id + '-3.jpg' }
+
+				]
+			});
 
 
 			tempTemplate.find("strong").each(function(index) {
@@ -408,7 +415,7 @@ async function setLocale(newLocale) {
 	// windfarm  dev
 	template = $(".windfarmdev:first");
 	if (template.length) {
-		debugger;
+
 		$.each(translations.projects.dev, function(key, value) {
 			if (searchParams.has('id')) {
 				let id = searchParams.get('id')
@@ -423,9 +430,15 @@ async function setLocale(newLocale) {
 			var swiper = tempTemplate.find(".swiper-wrapper")
 
 
-			for (let step = 1; step < 4; step++) {
-				swiper.append('<div class="swiper-slide"><img alt="" src="assets/img/wf/' + value.id + '-' + step + '.jpg"></div>')
-			}
+			$(".col-lg-8").vegas({
+				shuffle: true,
+				slides: [
+					{ src: 'assets/img/wf/' + value.id + '-1.jpg' },
+					{ src: 'assets/img/wf/' + value.id + '-2.jpg' },
+					{ src: 'assets/img/wf/' + value.id + '-3.jpg' }
+
+				]
+			});
 
 
 			tempTemplate.find("strong").each(function(index) {
@@ -452,7 +465,7 @@ async function setLocale(newLocale) {
 	// windfarm  dev
 	template = $(".social");
 	if (template.length) {
-		debugger;
+
 		$.each(template, function(key, valuet) {
 			if ($(valuet).hasClass('op')) {
 				$.each(translations.projects.open, function(key, value) {
@@ -517,3 +530,16 @@ function translateElement(element) {
 		$(element).html(translations[key])
 	}
 }
+
+$("#hero").vegas({
+	shuffle: true,
+	slides: [
+		{ src: 'assets/img/wf/ZD4-1.jpg' },
+		{ src: 'assets/img/wf/ZD6-3.jpg' },
+		{ src: 'assets/img/wf/ZD23-3.jpg' },
+		{ src: 'assets/img/wf/ZD6P-2.jpg' },
+		{ src: 'assets/img/wf/VK-3.jpg' }
+	],
+	overlay: 'assets/img/04.png',
+	animation: ['kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight']
+});
