@@ -530,12 +530,17 @@ function translateElement(element) {
 	}
 }
 
+$.vegas.isVideoCompatible = function() {
+	var devices = /(webOS|Phone|iPad|iPod|BlackBerry|Windows Phone)/i;
+	return !devices.test(navigator.userAgent);
+}
+
 $("#hero").vegas({
 	shuffle: true,
 	slides: [
 		{ src: 'assets/img/wf/ZD6-1.jpg' },
 		{
-			src: 'assets/img/wf/ZD6-2.jpg',
+			src: 'assets/img/wf/ZD6-3.jpg',
 			video: {
 				src: [
 					'assets/img/wf/vid.webm'
