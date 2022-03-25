@@ -455,7 +455,7 @@ section {
 # About
 --------------------------------------------------------------*/
 .about {
-  background: url("../img/about-bg.jpg") center center no-repeat;
+  background-color: #b5d9e9;
   background-size: cover;
   padding: 10px 0;
   position: relative;
