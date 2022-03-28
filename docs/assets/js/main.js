@@ -235,7 +235,7 @@
 			},
 			to: [
 				{
-					email: "vrsalo@gmail.com",
+					email: "info@encro.hr",
 					name: "Info"
 				}
 			],
