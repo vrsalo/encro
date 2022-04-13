@@ -368,8 +368,9 @@ async function setLocale(newLocale) {
 	}
 
 	// windfarm  op
-	template = $(".windfarmop:first");
+	template = $(".windfarmop:first").clone();
 	if (template.length) {
+		$(".windfarmop").remove();
 
 		$.each(translations.projects.open, function(key, value) {
 			if (searchParams.has('id')) {
@@ -378,32 +379,28 @@ async function setLocale(newLocale) {
 			}
 
 			tempTemplate = template.clone()
-			if (key) tempTemplate.append("<hr>")
 
 			tempTemplate.prependTo(".windfarms:first")
 			tempTemplate.show();
 			tempTemplate.attr("id", value.id);
 			tempTemplate.find("h3").html(value.name)
-			var swiper = tempTemplate.find(".swiper-wrapper")
 
-
-			$(".col-lg-8").vegas({
+			tempTemplate.find(".col-lg-8").html("").vegas({
 				shuffle: true,
 				slides: [
 					{ src: 'assets/img/wf/' + value.id + '-1.jpg' },
 					{ src: 'assets/img/wf/' + value.id + '-2.jpg' },
 					{ src: 'assets/img/wf/' + value.id + '-3.jpg' }
-
 				]
 			});
-
 
 			tempTemplate.find("strong").each(function(index) {
 				var tempKey = $(this).attr("data-i18n-key").replaceAll("wf-", "");
 				var temVale = value[tempKey]
 				if (temVale)
-					$(this).parent().append(": " + value[tempKey]);
-				else $(this).remove()
+					$(this).parent().html($(this)).append(": " + value[tempKey]);
+				else
+					$(this).remove()
 			});
 
 			if (searchParams.has('id')) {
@@ -433,8 +430,9 @@ async function setLocale(newLocale) {
 	}
 
 	// windfarm  dev
-	template = $(".windfarmdev:first");
+	template = $(".windfarmdev:first").clone();
 	if (template.length) {
+		$(".windfarmdev").remove();
 
 		$.each(translations.projects.dev, function(key, value) {
 			if (searchParams.has('id')) {
@@ -464,8 +462,9 @@ async function setLocale(newLocale) {
 				var tempKey = $(this).attr("data-i18n-key").replaceAll("wf-", "");
 				var temVale = value[tempKey]
 				if (temVale)
-					$(this).parent().append(": " + value[tempKey]);
-				else $(this).remove()
+					$(this).parent().html($(this)).append(": " + value[tempKey]);
+				else
+					$(this).remove()
 			});
 
 
