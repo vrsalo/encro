@@ -281,11 +281,8 @@
 
 })()
 
-// The locale our app first shows
-const defaultLocale = "en";
-
 // The active locale
-let locale;
+let locale = window.localStorage.getItem('locale');;
 
 // Gets filled with active locale translations
 let translations = {};
@@ -293,13 +290,20 @@ let translations = {};
 // When the page content is ready...
 document.addEventListener("DOMContentLoaded", () => {
 	// Translate the page to the default locale
-	setLocale(defaultLocale);
+	if (!locale) locale = 'en'
+	setLocale(locale);
 });
+
+
+function toggleLng() {
+	locale = (locale == "en") ? "hr" : "en"
+	setLocale(locale)
+}
 
 // Load translations for the given locale and translate
 // the page to this locale
 async function setLocale(newLocale) {
-	if (newLocale === locale) return;
+	window.localStorage.setItem('locale', newLocale);
 
 	const newTranslations =
 		await fetchTranslationsFor(newLocale);
@@ -314,7 +318,8 @@ async function setLocale(newLocale) {
 	var tempTemplate;
 
 	// news populate
-	var template = $(".entry:first");
+	var template = $(".entry:first").clone();
+	$(".entry").remove()
 	if (template.length) {
 
 		$.each(translations.news, function(key, value) {
@@ -344,7 +349,8 @@ async function setLocale(newLocale) {
 	}
 
 	// news short main page
-	template = $(".newsShort:first");
+	template = $(".newsShort:first").clone();
+	$(".newsShort").remove()
 	if (template.length) {
 
 		var total = translations.news.length - 3;
@@ -477,6 +483,7 @@ async function setLocale(newLocale) {
 
 	// windfarm  dev
 	template = $(".social");
+	template.html("");
 	if (template.length) {
 
 		$.each(template, function(key, valuet) {
