@@ -34,7 +34,7 @@
 	"text-2-desc": "za svih 7 operativnih vjetroelektrana vodi se sa izvrsnim rezultatima i fokusom na stalno poboljšanje",
 	"wf-year": "Godina",
 	"wf-location": "Lokacija",
-	"wf-power": "Priključna Snaga:",
+	"wf-power": "Priključna Snaga",
 	"wf-not": "Br. vjetroagregata",
 	"wf-type": "Tip vjetroagregata",
 	"wf-prod": "Proizvodnja (GWh)",
@@ -42,16 +42,16 @@
 	"wf-factor": "Faktor opterećenja (%)",
 	"news": [
 		{
-			"title": "Encro.hr 1🥳",
+			"title": "Encro.hr je na mreži",
 			"short": "Sretni smo što objavljujemo da je naša web stranica online <h1>🎉</h1>",
-			"extra": "Tu je nakon nekog razvoja :)",
+			"extra": ":)",
 			"date": "Mar 20, 2022",
 			"img": ""
 		},
 		{
-			"title": "WF ZD2P & ZD3P prošli su konačnu reviziju EBRD-a, čeka se završno odobrenje",
+			"title": "VE ZD2P & ZD3P prošli su konačnu reviziju EBRD-a, čeka se završno odobrenje",
 			"short": "Pružanje dugoročnog osiguranog zajma u iznosu do 46 milijuna eura, rezerve za otplatu duga do 3,5 milijuna eura i bankovnog jamstva do 15 milijuna eura Kunovac d.o.o., hrvatskoj SPV tvrtki u zajedničkom vlasništvu Taaleri SolarWind II S.a.r.l i Encro Kunovac d.o.o., u svrhu akvizicije, izgradnje i rada projekta vjetroelektrane smještene u Zadarskoj županiji, Hrvatska, s priključnom snagom od 68 MW (&quot;ZD2P&quot;) i 43 MW (&quot;ZD3P&quot;).",
-			"extra": "Projekt će doprinijeti ublažavanju klimatskih promjena povećanjem udjela proizvodnje električne energije iz obnovljivih izvora u Hrvatskoj te će nacionalnom energetskom sustavu dodati 111 MW novih proizvodnih kapaciteta ujedno pružajući značajnu potporu nacionalnom gospodarstvu u ispunjavanju zadanih zelenih ciljeva do 2030. Osim toga, projekt će ojačati ulogu privatnog sektora u sektoru obnovljivih izvora energije u Hrvatskoj, oslanjajući se na kombinaciju financijskog ugovora o kupnji električne energije i tržišnog preuzimanja bez potrebe za državnom potporom u obliku feed-in tarifa ili feed-in premija.<br><br><a target='_blank' href='https://www.ebrd.com/sites/Satellite?c=Content&amp;cid=1395304776164&amp;d=Touch&amp;pagename=EBRD%2FContent%2FContentLayout'> 📄 Podaci o EBRD-u </a>",
+			"extra": "Projekt će doprinijeti ublažavanju klimatskih promjena povećanjem udjela proizvodnje električne energije iz obnovljivih izvora u Hrvatskoj te će nacionalnom energetskom sustavu dodati 111 MW novih proizvodnih kapaciteta ujedno pružajući značajnu potporu nacionalnom gospodarstvu u ispunjavanju zadanih zelenih ciljeva do 2030. Osim toga, projekt će ojačati ulogu privatnog sektora u sektoru obnovljivih izvora energije u Hrvatskoj, oslanjajući se na kombinaciju financijskog ugovora o kupnji električne energije i tržišnog preuzimanja bez potrebe za državnom potporom u obliku feed-in tarifa ili feed-in premija.<br><br><a target='_blank' href='https://www.ebrd.com/sites/Satellite?c=Content&amp;cid=1395304776164&amp;d=Touch&amp;pagename=EBRD%2FContent%2FContentLayout'> 📄 Dodatne informacije </a>",
 			"date": "Mar 22, 2022",
 			"img": "assets/img/wf/ZD6-3.jpg"
 		},
@@ -66,7 +66,7 @@
 	"projects": {
 		"open": [
 			{
-				"name": "WF Zadar 6",
+				"name": "VE Zadar 6",
 				"id": "ZD6",
 				"year": "2011",
 				"location": "Gračac",
@@ -77,11 +77,11 @@
 				"load": "2,925",
 				"factor": "33",
 				"video": "",
-				"text": "Vjetroelektrana Zadar 6 (9 MW) koja se nalazi u županiji Gračac u komercijalnom je pogonu od siječnja 2011. godine i jedna je od vodećih hrvatskih vjetroelektrana. Vjetroelektrana se sastoji od 4 vjetroagregata SWT-2.3-82VS. ",
+				"text": "Vjetroelektrana Zadar 6 (9 MW) koja se nalazi u općinu Gračac u komercijalnom je pogonu od siječnja 2011. godine i jedna je od prvih vjetroelektrana instaliranih u Hrvatskoj. Vjetroelektrana se sastoji od 4 vjetroagregata SWT-2.3-82VS. ",
 				"img": []
 			},
 			{
-				"name": "WF Zadar 6 Extension",
+				"name": "VE Zadar 6 Proširenje",
 				"id": "ZD6P",
 				"year": "2017",
 				"location": "Gračac",
@@ -92,11 +92,11 @@
 				"load": "2,980",
 				"factor": "34",
 				"video": "https://www.youtube.com/watch?v=gvJxc82vOmg",
-				"text": "Vjetroelektrana Zadar 6 Extension (44,2 MW) predstavlja proširenje projekta Zadar 6. Vjetroelektrana se sastoji od 13 x SWT-3,4-108 vjetroagregata. U usporedbi s vjetroagregatima Zadar 6, vjetroagregati Zadar 6 Extension imaju 73 % veću površina rotora i 48 % veću nazivnu snaga. Proširenje WF Zadar 6 je u komercijalnom pogonu od listopada 2017.",
+				"text": "Vjetroelektrana Zadar 6 Proširenje (44,2 MW) predstavlja proširenje projekta Zadar 6. Vjetroelektrana se sastoji od 13 x SWT-3,4-108 vjetroagregata. U usporedbi s vjetroagregatima Zadar 6, vjetroagregati Zadar 6 Proširenje imaju 73 % veću površina rotora i 48 % veću nazivnu snaga. Proširenje VE Zadar 6 je u komercijalnom pogonu od listopada 2017.",
 				"img": []
 			},
 			{
-				"name": "WF Zadar 2 & 3",
+				"name": "VE Zadar 2 & 3",
 				"id": "ZD23",
 				"year": "2012",
 				"location": "Benkovac",
@@ -107,11 +107,11 @@
 				"load": "3,154",
 				"factor": "36",
 				"video": "https://www.youtube.com/watch?v=8ISCYJtQlGU",
-				"text": "Vjetroelektrana Zadar 2 & 3 (36 MW) koja se nalazi u Benkovačkoj i Obrovačkoj županiji u komercijalnom je radu od veljače 2012. godine. Vjetroelektrana se sastoji od 8 x SWT-2.3-93 (Zadar 2) i 8 x SWT- 2.3-101 (Zadar 3) vjetroagregata. Od početka komercijalnog rada Zadar 2 & 3 kontinuirano zauzima 1. mjesto u Hrvatskoj prema faktoru kapaciteta.",
+				"text": "Vjetroelektrana Zadar 2 & 3 (36 MW) koja se nalazi u administrativnom obuhvatu grada Benkovca i Obrovca u komercijalnom je radu od veljače 2012. godine. Vjetroelektrana se sastoji od 8 x SWT-2.3-93 (Zadar 2) i 8 x SWT- 2.3-101 (Zadar 3) vjetroagregata. Od početka komercijalnog rada Zadar 2 & 3 kontinuirano zauzima 1. mjesto u Hrvatskoj prema faktoru opterećenja.",
 				"img": []
 			},
 			{
-				"name": "WF Voštane Kamensko",
+				"name": "VE Voštane Kamensko",
 				"id": "VK",
 				"year": "2013",
 				"location": "Trilj",
@@ -122,11 +122,11 @@
 				"load": "2,605",
 				"factor": "30",
 				"video": "https://www.youtube.com/watch?v=x5_7X-_dHUE",
-				"text": "Vjetroelektrana Voštane Kamensko (40 MW) koja se nalazi u Triljskoj županiji je u komercijalnom pogonu od kolovoza 2013. godine i sastoji se od 14 x SWT-3.0-101 vjetroagregata. Voštane Kamensko imaju iznadprosječni faktor kapaciteta.",
+				"text": "Vjetroelektrana Voštane Kamensko (40 MW) koja se nalazi u gradu Trilju je u komercijalnom pogonu od kolovoza 2013. godine i sastoji se od 14 x SWT-3.0-101 vjetroagregata. Voštane Kamensko imaju iznadprosječni faktor opterećenja.",
 				"img": []
 			},
 			{
-				"name": "WF Zadar 4",
+				"name": "VE Zadar 4",
 				"id": "ZD4",
 				"year": "2013",
 				"location": "Benkovac",
@@ -137,13 +137,13 @@
 				"load": "2,416",
 				"factor": "28",
 				"video": "",
-				"text": "Vjetroelektrana Zadar 4 (9 MW) koja se nalazi u gradu Benkovcu. Zadar 4 je u komercijalnom pogonu od kolovoza 2013. godine i ima iznadprosječni faktor opterećenja. Vjetroelektrana se sastoji od 4 x SWT-2.3-108 vjetroagregata",
+				"text": "Vjetroelektrana Zadar 4 (9 MW) koja se nalazi u gradu Benkovcu u komercijalnom je pogonu od kolovoza 2013. godine i ima iznadprosječni faktor opterećenja. Vjetroelektrana se sastoji od 4 x SWT-2.3-108 vjetroagregata",
 				"img": []
 			}
 		],
 		"dev": [
 			{
-				"name": "WF ZD2P & ZD3P",
+				"name": "VE ZD2P & ZD3P",
 				"id": "ZD23P",
 				"location": "Benkovac",
 				"not": "25",
