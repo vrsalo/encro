@@ -571,3 +571,9 @@ $("#hero").vegas({
 	overlay: 'assets/img/04.png',
 	animation: ['kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight']
 });
+
+new PureCounter({
+	selector: ".purecounter",
+	duration: 2,
+	separator: true
+});
